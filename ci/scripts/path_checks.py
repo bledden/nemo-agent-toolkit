@@ -231,7 +231,12 @@ IGNORED_FILE_PATH_PAIRS: set[tuple[str, str]] = {
     (
         r"^docs/",
         r"\.rst$",
-    )
+    ),
+    # ignore external submodule paths (may not be initialized locally)
+    (
+        r"^examples/frameworks/auto_wrapper/langchain_deep_research/",
+        r"^external/lc-deepagents-quickstarts/deep_research",
+    ),
 }
 
 # Files to ignore -- regex pattern
